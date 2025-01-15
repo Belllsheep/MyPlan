@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_color">
+
+    <!-- 计划四象限 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="计划四象限"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text_color"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 自定义 View 用于绘制四象限 -->
+    <com.example.app9.ShowPlans.QuadrantView
+        android:id="@+id/quadrantView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/card_background_color"
+        android:elevation="4dp"
+        android:padding="8dp"/>
+
+    <!-- 今日任务提醒 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="今日任务提醒"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text_color"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 今日任务列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/todayTasksRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:clipToPadding="false"
+        android:padding="8dp"/>
+</LinearLayout>
